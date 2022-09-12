@@ -65,4 +65,4 @@ const AddList = props => {
     );
 };
 
-export default Screen;
+export default AddList;
