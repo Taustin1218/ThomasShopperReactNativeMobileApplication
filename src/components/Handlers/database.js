@@ -43,7 +43,7 @@ module.exports = {
                 [],
                 // callback function to handle results of SQL query
                 () => {
-                    console.log(name + "  added successfully");
+                    console.log(name + " added successfully");
                 },
                 error => {
                     console.log('Error adding list ' + error.message);
