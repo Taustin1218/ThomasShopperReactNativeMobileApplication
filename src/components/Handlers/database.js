@@ -38,7 +38,7 @@ module.exports = {
         (await shopperDB).transaction(txn => {
             // execute the SQL
             txn.executeSql(
-                `INSERT INTO ${listsTableName} (name, store, date) VALUES ("${name}", "${store}", "${date}")`,
+                `INSERT INTO ${listTableName} (name, store, date) VALUES ("${name}", "${store}", "${date}")`,
                 // arguments passed when using SQL prepared statements
                 [],
                 // callback function to handle results of SQL query

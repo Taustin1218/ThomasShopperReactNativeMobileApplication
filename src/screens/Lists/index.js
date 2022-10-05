@@ -3,7 +3,7 @@ import { View, TouchableOpacity, Text, FlatList } from 'react-native';
 import List from '../../components/List';
 import { useNavigation } from '@react-navigation/native';
 import styles from './styles';
-// import openDtabase hook
+// import openDatabase hook
 import { openDatabase } from "react-native-sqlite-storage";
 
 // use hook
@@ -39,7 +39,7 @@ const ListsScreen = props => {
               for (let i = 0; i < len; i++){
                 // push a row of data at a time onto the
                 // results array
-                let item = res.rows.items(i);
+                let item = res.rows.item(i);
                 results.push({
                   id: item.id,
                   name: item.name,
