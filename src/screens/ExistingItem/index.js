@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Text, TextInput, View, Pressable} from 'react-native';
+import {Text, TextInput, View, Pressable, Alert} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import styles from './styles';
 // import openDtabase hook
@@ -35,7 +35,7 @@ const ExistingListScreen = props => {
 
         shopperDB.transaction(txn => {
             txn.executeSql(
-                `UPDATE ${listTableName} SET name = '${name}', store = '${store}', '${date}' WHERE id = ${post.id}`,
+                `UPDATE ${listTableName} SET name = '${name}', store = '${store}', date = '${date}' WHERE id = ${post.id}`,
                 [],
                 () => {
                     console.log(`${name} updated successfully`);
@@ -51,7 +51,37 @@ const ExistingListScreen = props => {
     }
 
     const onListDelete = () => {
-        
+        return Alert.alert(
+            // title
+            'Confirm',
+            // message
+            'Are you sure you want to delete this list?',
+            // buttons
+            [
+                {
+                    text: 'Yes',
+                    onPress: () => {
+                        shopperDB.transaction(txn => {
+                            txn.executeSql(
+                                `DELETE FROM ${listTableName} WHERE id = ${post.id}`,
+                                [],
+                                () => {
+                                    console.log(`${name} deleted successfully`);
+                                },
+                                error => {
+                                    console.log('Error on deleting list' + error.message);
+                                }
+                            );
+                        });
+                        alert('List Deleted!');
+                        navigation.navigate('Start Shopping!');
+                    },
+                },
+                {
+                    text: 'No',
+                },
+            ],
+        );
     }
 
     const onAddItem = () => {
