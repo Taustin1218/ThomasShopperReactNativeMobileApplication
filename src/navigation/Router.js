@@ -4,7 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import HomeScreen from '../screens/Home';
 import TabNavigator from './TabNavigator';
 import AddList from '../screens/AddList';
-import ExistingListScreen from '../screens/ExistingItem';
+import ExistingListScreen from '../screens/ExistingList';
 
 const Stack = createStackNavigator();
 
