@@ -39,7 +39,7 @@ const AddItemScreen = props => {
 
   return (
     <View style={styles.container}>
-        <View style={styles.container}>
+        <View style={styles.topContainer}>
                 <TextInput 
                     value={name}
                     onChangeText={value => setName(value)}
