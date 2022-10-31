@@ -16,10 +16,18 @@ const database = require('./src/components/Handlers/database.js');
 const App: () => Node = () => {
   try {
     database.createListsTable();
-    database.createItemTable();
   } catch (error) {
     console.log('Failed to create lists table ' + error);
+  }
+  try {
+    database.createItemTable();
+  } catch (error) {
     console.log('Failed to create items table ' + error);
+  }
+  try {
+    database.createListItemsTable();
+  } catch (error) {
+    console.log('Failed to create list items table ' + error);
   }
   return <Router />;
 };
