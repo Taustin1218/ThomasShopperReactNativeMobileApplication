@@ -49,6 +49,32 @@ const ItemsScreen = props => {
               }
               // assign results array to lists state variable
               setItems(results);
+              /*
+              [
+                {
+                  id: 1
+                  name: eggs
+                  price: 3.99
+                  quantity:1
+                }
+              ]
+              [
+                {
+                  id: 2
+                  name: bread
+                  price: 4.99
+                  quantity:1
+                }
+              ]
+              [
+                {
+                  id: 3
+                  name: milk
+                  price: 5.99
+                  quantity:1
+                }
+              ]
+              */
             } else {
               // if no rows of data were returned,
               // set items state variable to an empty array
