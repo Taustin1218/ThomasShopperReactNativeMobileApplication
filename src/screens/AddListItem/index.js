@@ -58,24 +58,28 @@ const AddListItemScreen = props => {
                       price: 3.99
                       quantity: 1
                       list_id: 1
-
+              },
+              {
                       id: 2
                       name: Bread
                       price: 4.99
                       quantity: 1
                       list_id: 1
-
+              },
+              {
                       id: 3
                       name: Milk
                       price: 5.99
                       quantity: 1
                       list_id: 1
-
+              },
+              {
                       id: 4
                       name: Necklace
                       price: 25.99
                       quantity: 1
                       list_id: 2
+              },
               //   }
               // ] */
             } else {

@@ -49,7 +49,8 @@ const ItemsScreen = props => {
               }
               // assign results array to lists state variable
               setItems(results);
-              /*
+              /* This is what the items state variable looks like
+              in the Items screen.
               [
                 {
                   id: 1
