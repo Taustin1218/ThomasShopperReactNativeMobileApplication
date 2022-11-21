@@ -7,7 +7,7 @@ const listTableName = 'Lists';
 const itemTableName = 'Items';
 const listItemsTableName = 'list_items';
 
-module.exports = {
+module.exports = { 
 
     // declare function that will create the lists table
     createListsTable: async function () {
